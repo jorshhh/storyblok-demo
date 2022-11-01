@@ -2,12 +2,19 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "preview": "npx serve .output/public",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.12"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^8.0.0-beta.3",
+    "@storyblok/nuxt": "^4.4.2",
+    "@tailwindcss/typography": "^0.5.7",
+    "axios": "^0.27.2",
+    "esbuild": "^0.15.12"
   }
 }
